@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #fff1f5, #ffd6e0);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  z-index: 2;
+  max-width: 90%;
+}
+
+h1 {
+  color: #ff4f8b;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.emoji {
+  position: absolute;
+  top: -50px;
+  font-size: 26px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>🎉 Happy Birthday meri pyarii rasmalayii 🎉</h1>
+  <p>
+    Tum meri life ka sabse best part hoh 💖<br>
+    i loveee youuu sooo muchhh rishuuu 🫂<br>
+    Hamesha khush raho, or aise hi har din mujhe sundar lgti raho 🌷
+  </p>
+  <p><b>– Ayush 😚</b></p>
+</div>
+
+<script>
+const emojis = [
+  "😚","🌷","🫶🏻","🫂","🧿","🥳","😘",
+  "🌺","🌸","🌼","🌹",
+  "💖","💘","💝","💗","💓","❤️"
+];
+
+for (let i = 0; i < 40; i++) {
+  let e = document.createElement("div");
+  e.className = "emoji";
+  e.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+  e.style.left = Math.random() * 100 + "vw";
+  e.style.animationDuration = (3 + Math.random() * 5) + "s";
+  e.style.fontSize = (22 + Math.random() * 10) + "px";
+  document.body.appendChild(e);
+}
+</script>
+
+</body>
+</html>
